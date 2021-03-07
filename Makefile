@@ -33,7 +33,7 @@ distclean:
 	rm -rf .cargo vendor vendor.tar.xz
 
 install: all
-	install -D -m 04755 "target/release/$(BIN)" "$(DESTDIR)$(bindir)/$(BIN)"
+	install -D -m 0755 "target/release/$(BIN)" "$(DESTDIR)$(bindir)/$(BIN)"
 	install -D -m 0644 "data/$(BIN).desktop" "$(DESTDIR)$(sysconfdir)/xdg/autostart/$(BIN).desktop"
 
 uninstall:
